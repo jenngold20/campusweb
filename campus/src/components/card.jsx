@@ -1,7 +1,6 @@
 import React, { useState, useContext} from "react";
 import { useNavigate } from "react-router-dom";
 import { ContextGlobal } from "../components/utils/global.context";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import logotecno3f from "../images/logotecno3f.png"
 const Card = ({ name, username, id, favorite}) => {
 

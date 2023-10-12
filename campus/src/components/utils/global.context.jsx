@@ -1,37 +1,62 @@
 import { createContext, useState, useEffect, useMemo } from "react";
-import axios from 'axios';
 import Card from "../card";
 
 export const ContextGlobal = createContext();
 
 export const ContextProvider = ({ children }) => {
-  
-  //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
-
   const [theme, setTheme] = useState("");
   const [data, setData] = useState([]);
   const [fav, setFav] = useState([]);
 
+  // Define tus datos de ejemplo aquí
+  const datosEjemplo = [
+    {
+      id: 1,
+      icon: "icono-instructores",
+      title: "Instructores/as",
+      description: "Destacan por su compromiso y capacidad de transmitir conocimientos de manera clara y efectiva.",
+    },
+    {
+      id: 2,
+      icon: "icono-clases",
+      title: "Clases Online",
+      description: "Aprende conocimientos tecnológicos de forma dinámica y flexible desde cualquier lugar.",
+    },
+    {
+      id: 3,
+      icon: "icono-proyectos",
+      title: "Proyectos",
+      description: "Fomentamos la colaboración y el trabajo en equipo a través de proyectos y actividades grupales.",
+    },
+    {
+      id: 4,
+      icon: "icono-material",
+      title: "Material Online",
+      description: "Accede a todas las presentaciones, videos, lecturas y ejercicios en cualquier momento.",
+    },
+    // Puedes agregar más objetos según sea necesario
+  ];
+
   useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/users')
-    
-      .then(response => setData(response.data))
-      .catch(error => console.log(error));
+    // Simula la carga de datos desde una API
+    // En lugar de axios.get, puedes utilizar datosEjemplo
+    setData(datosEjemplo);
   }, []);
 
   const newData = useMemo(() => {
     console.log('Processing data...');
-    return data.map(dentist =>
+    return data.map(item => (
       <Card
-        key={dentist.id}
-        id={dentist.id}
-        name={dentist.name}
-        username={dentist.username}
-      />)
+        key={item.id}
+        icon={item.icon}
+        title={item.title}
+        description={item.description}
+      />
+    ));
   }, [data]);
 
   return (
-    <ContextGlobal.Provider value={{theme, setTheme, data, fav, setFav, newData}}>
+    <ContextGlobal.Provider value={{ theme, setTheme, data, fav, setFav, newData }}>
       {children}
     </ContextGlobal.Provider>
   );
