@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect, useMemo } from "react";
 import Card from "../card";
 
+
 export const ContextGlobal = createContext();
 
 export const ContextProvider = ({ children }) => {
@@ -12,13 +13,13 @@ export const ContextProvider = ({ children }) => {
   const datosEjemplo = [
     {
       id: 1,
-      icon: "icono-instructores",
+      icon: "",      
       title: "Instructores/as",
       description: "Destacan por su compromiso y capacidad de transmitir conocimientos de manera clara y efectiva.",
     },
     {
       id: 2,
-      icon: "icono-clases",
+      icon: "language",
       title: "Clases Online",
       description: "Aprende conocimientos tecnológicos de forma dinámica y flexible desde cualquier lugar.",
     },

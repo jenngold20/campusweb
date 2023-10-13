@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { ContextGlobal } from "../components/utils/global.context";
-import campus from "../images/campus.png"
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -18,9 +17,22 @@ const Home = () => {
         </h1>
   <p>¡Explorá el Futuro Tecnológico en Nuestro Campus Virtual!</p>
   <button>Ver cursos</button></div>
+
+<div className="sobreCampus">
+  <p className="mini">SOBRE EL CAMPUS</p>
+  <h2>
+  Les damos la bienvenida al Campus Tecno3F
+  </h2>
+<p className="informacion">Te ayudamos a empezar tu proceso de aprendizaje más rápido con itinerarios personalizados que podrás recorrer paso a paso, accediendo a los mejores contenidos, recomendados por expertos.</p>
+</div>
+
+<div className="infocards">
       <div className="card-grid">
         {newData}
       </div>
+</div>
+
+
     </main>
   );
 };
