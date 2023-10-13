@@ -17,12 +17,16 @@ const Navbar = () => {
 
   return (
     <nav className={theme}>
-      <img src={logotecno3f} alt='LogoTecno'/>
+      <div className="logoheader">
+      <img src={logotecno3f} alt='LogoTecno'/></div>
+      <div className="nav1">
       <Link to="/">TECNO 3F</Link>
       <Link to="/">CURSOS</Link>
-      <Link to="/">PREGUNTAS</Link>
-      <Link to="/">REGISTRARSE</Link>
-      <Link to="/">WEBCAMPUS</Link>
+      <Link to="/">PREGUNTAS</Link></div>
+      <div className="nav2">
+      <Link to="/">REGISTRARSE</Link></div>
+      <div className="nav3">
+      <Link to="/">WEBCAMPUS</Link></div>
        {/* <Link to="/contact">Contacto</Link> */}
       <button onClick={handleClick}> {theme==="dark"?<BsLightbulbFill/>:<BsLightbulbOffFill/>}  </button>
     </nav>

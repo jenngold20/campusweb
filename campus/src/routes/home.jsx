@@ -9,10 +9,13 @@ const Home = () => {
 
   return (
     <main className={theme}>
-<img src={campus} alt='LogoTecno'/>
+{/* <img src={campus} alt='LogoTecno'/> */}
 
 <div className="ver-cursos">
-  <h1>CAMPUS TECNO 3F</h1>
+<h1>
+          <p>CAMPUS</p>
+          <p>TECNO 3F</p>
+        </h1>
   <p>¡Explorá el Futuro Tecnológico en Nuestro Campus Virtual!</p>
   <button>Ver cursos</button></div>
       <div className="card-grid">

@@ -10,8 +10,6 @@ import logotecno3f from "../images/logotecno3f.png"
 
 
 
-
-
 const Footer = () => {
 
   const {theme } = useContext(ContextGlobal);
