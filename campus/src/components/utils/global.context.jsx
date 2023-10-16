@@ -13,7 +13,7 @@ export const ContextProvider = ({ children }) => {
   const datosEjemplo = [
     {
       id: 1,
-      icon: "",      
+      icon: "school",      
       title: "Instructores/as",
       description: "Destacan por su compromiso y capacidad de transmitir conocimientos de manera clara y efectiva.",
     },
@@ -25,18 +25,19 @@ export const ContextProvider = ({ children }) => {
     },
     {
       id: 3,
-      icon: "icono-proyectos",
+      icon: "create",
       title: "Proyectos",
       description: "Fomentamos la colaboración y el trabajo en equipo a través de proyectos y actividades grupales.",
     },
     {
       id: 4,
-      icon: "icono-material",
+      icon: "group",
       title: "Material Online",
       description: "Accede a todas las presentaciones, videos, lecturas y ejercicios en cualquier momento.",
     },
     // Puedes agregar más objetos según sea necesario
   ];
+  
 
   useEffect(() => {
     // Simula la carga de datos desde una API
@@ -62,3 +63,4 @@ export const ContextProvider = ({ children }) => {
     </ContextGlobal.Provider>
   );
 };
+

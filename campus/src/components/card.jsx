@@ -1,5 +1,8 @@
 import React, { useState} from "react";
-
+// import School from "../images/school.png";
+// import Create from "../images/create.png";
+// import Language from "../images/language.png";
+// import Group from "../images/group.png";
 
 import { useNavigate } from "react-router-dom";
 const Card = ({ icon, title, description, id}) => {
@@ -30,12 +33,21 @@ const Card = ({ icon, title, description, id}) => {
   //     setFav([...fav])
   //     }
   // };
+  // const iconImage = icon === "school" ? School : null; // Agrega más casos según tus iconos
+  // const iconImage = icon === "language" ? Language : null; // Agrega más casos según tus iconos
+
+ // Importa dinámicamente la imagen basada en el nombre del icono
+ const iconImage = import(`../images/${icon}.png`).then((image) => {
+  // Cuando la imagen se cargue, puedes usarla
+  return image.default;
+});
+
 
   return (
     <div className="card">
       <div>
-        <img src={icon} alt="icon"/>
-        <h3 onClick={handleClick}>{title}</h3>
+      <img src={iconImage} alt="icon" />
+      <h3 onClick={handleClick}>{title}</h3>
         <p>{description}</p>
       </div>
 {/* 
