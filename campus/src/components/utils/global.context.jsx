@@ -13,7 +13,7 @@ export const ContextProvider = ({ children }) => {
   const datosEjemplo = [
     {
       id: 1,
-      icon: "school",      
+      icon: "school.png",      
       title: "Instructores/as",
       description: "Destacan por su compromiso y capacidad de transmitir conocimientos de manera clara y efectiva.",
     },
