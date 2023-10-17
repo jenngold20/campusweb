@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ContextGlobal } from "../components/utils/global.context";
 
+
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
@@ -31,6 +32,20 @@ const Home = () => {
         {newData}
       </div>
 </div>
+
+
+<div className="conoce">
+<p className="mini2">CURSOS</p>
+
+<h2>Conocé los cursos</h2>
+
+
+
+
+
+
+</div>
+
 
 
     </main>

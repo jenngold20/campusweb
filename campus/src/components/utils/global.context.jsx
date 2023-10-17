@@ -35,13 +35,11 @@ export const ContextProvider = ({ children }) => {
       title: "Material Online",
       description: "Accede a todas las presentaciones, videos, lecturas y ejercicios en cualquier momento.",
     },
-    // Puedes agregar más objetos según sea necesario
+    
   ];
   
 
   useEffect(() => {
-    // Simula la carga de datos desde una API
-    // En lugar de axios.get, puedes utilizar datosEjemplo
     setData(datosEjemplo);
   }, []);
 
