@@ -30,7 +30,7 @@ h1 {
 
 /* Navbar */
 
-nav {
+.navHeader nav {
   display: flex;
   min-height: 100%;
   padding: 1rem 2rem;
@@ -71,7 +71,7 @@ nav > button {
   transition: all 0.3s ease;
 }
 
-a {
+.navHeader a {
   text-decoration: none;
   margin: 0.5rem;
   cursor: pointer;
@@ -371,11 +371,31 @@ img {
   line-height: 145.5%;
   letter-spacing: 0.13875rem;
   text-transform: uppercase;
-  margin-bottom: 1rem;
-  margin-top: 6rem;
+  margin-bottom: 0.5rem; 
+  margin-top: 0.5rem; 
   padding-left: 8rem;
+  position: relative; 
+  top: -1.5rem;
 }
 
+
+
+.conoce {
+  font-family: Quicksand;
+  margin-bottom: 2rem;
+  margin-top: 6rem;
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+
+}
+
+.mini-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex; 
+  
+}
 
 .conoce h2 {
   color: #383838;
@@ -386,17 +406,101 @@ img {
   font-weight: 700;
   line-height: normal;
   width: 46.75rem;
-  margin-bottom: 2rem;
-  margin-top: 0;
-  padding-left: 8rem;
+  margin-bottom: 1rem; /* Aumenta el margen inferior */
+  margin-top: 2rem;
+}
+
+.mini-nav{
+font-family: Montserrat;
+font-size: 0.75rem;
+font-style: normal;
+font-weight: 700;
+line-height: 100%; /* 0.75rem */
+text-transform: uppercase;
+
+}
+
+.mini-nav a{
+text-decoration: none;
+margin: 0.5rem;
+cursor: pointer;
+padding: 0.5rem;
+color: #5A5A5A;
+
+
+}
+
+.mini-nav a {
+  color: rgba(90, 90, 90, 0.60);
+font-family: Montserrat;
+font-size: 0.75rem;
+font-style: normal;
+font-weight: 700;
+line-height: 100%; /* 0.75rem */
+text-transform: uppercase;
+}
+
+.mini-nav .verTodos{
+  border-radius: 12.5rem;
+  background-color: rgba(90, 90, 90, 0.08);
+  color: #5A5A5A;
+
+}
+
+.mini-nav a:hover{
+  
+  color: #5A5A5A;
+
 }
 
 
-.conoce {
+.card2 {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  width: 14rem;
+  padding: 2.125rem 1.5rem;
   font-family: Quicksand;
-  margin-bottom: 61rem;
-  margin-top: 0;
-  background-color: #3c09f7;
+}
+
+.cursosDispo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 2rem; 
+  justify-items: center; 
+  padding: 2rem;
+  background-color: #f2f2f2;
+
   
 }
 
+.verMas{
+
+  color: #818181;
+font-family: Quicksand;
+font-size: 1rem;
+font-style: normal;
+font-weight: 700;
+line-height: 150%; /* 1.5rem */
+border-radius: 12.5rem;
+border: 1px solid rgba(129, 129, 129, 0.40);
+cursor: pointer;
+}
+
+.inscribirme{
+  border-radius: 12.5rem;
+background: #8374B6;
+color: #FFF;
+font-family: Quicksand;
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: 150%;
+padding: 0rem 1rem;
+cursor: pointer;
+
+}

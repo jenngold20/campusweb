@@ -1,11 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef  } from "react";
 import { ContextGlobal } from "../components/utils/global.context";
 
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
-  const { theme, newData } = useContext(ContextGlobal);
+  const { theme, newData, newData2 } = useContext(ContextGlobal);
+  const conoceCursosRef = useRef(null);
+
+  const scrollToConoceCursos = () => {
+    conoceCursosRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+
 
   return (
     <main className={theme}>
@@ -17,7 +24,7 @@ const Home = () => {
           <p>TECNO 3F</p>
         </h1>
   <p>¡Explorá el Futuro Tecnológico en Nuestro Campus Virtual!</p>
-  <button>Ver cursos</button></div>
+  <button onClick={scrollToConoceCursos}>Ver cursos</button></div>
 
 <div className="sobreCampus">
   <p className="mini">SOBRE EL CAMPUS</p>
@@ -34,16 +41,24 @@ const Home = () => {
 </div>
 
 
-<div className="conoce">
+<div className="conoce"  ref={conoceCursosRef}>
 <p className="mini2">CURSOS</p>
 
 <h2>Conocé los cursos</h2>
 
+<nav className="mini-nav">
+    <ul>
+      <li ><a href="#ver-todos" className="verTodos">Ver Todos</a></li>
+      <li><a href="#cursos">Cursos</a></li>
+      <li><a href="#capacitaciones">Capacitaciones</a></li>
+      <li><a href="#empresas">Empresas</a></li>
+    </ul>
+  </nav>
 
+</div>
 
-
-
-
+<div className="cursosDispo">
+        {newData2}
 </div>
 
 

@@ -37,6 +37,7 @@ const Card = ({ icon, title, description, id}) => {
   // const iconImage = icon === "language" ? Language : null; // Agrega más casos según tus iconos
 
  // Importa dinámicamente la imagen basada en el nombre del icono
+ 
  const iconImage = import(`../images/${icon}.png`).then((image) => {
   // Cuando la imagen se cargue, puedes usarla
   return image.default;
@@ -46,7 +47,7 @@ const Card = ({ icon, title, description, id}) => {
   return (
     <div className="card">
       <div>
-      <img src={iconImage} alt="icon" />
+      <img src={icon} alt="icon" />
       <h3 onClick={handleClick}>{title}</h3>
         <p>{description}</p>
       </div>

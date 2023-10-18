@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { ContextGlobal } from "./utils/global.context";
+import React, { useContext, useRef } from "react";
+import { ContextGlobal  } from "./utils/global.context";
 import { Link } from "react-router-dom";
 import { BsLightbulbFill, BsLightbulbOffFill } from "react-icons/bs";
 import logotecno3f from "../images/logotecno3f.png";
@@ -14,7 +14,10 @@ const Navbar = () => {
     theme === "" ? setTheme("dark") : setTheme("");
   };
 
+
+
   return (
+    <div className="navHeader">
     <nav className={theme}>
       <div className="logoheader">
         <img src={logotecno3f} alt="LogoTecno" />
@@ -35,7 +38,7 @@ const Navbar = () => {
         {" "}
         {theme === "dark" ? <BsLightbulbFill /> : <BsLightbulbOffFill />}{" "}
       </button>
-    </nav>
+    </nav></div>
   );
 };
 
